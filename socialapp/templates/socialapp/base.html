@@ -6,9 +6,12 @@
 <body>
     <h1>Social Site</h1>
     {% if user.is_authenticated %}
-        <p>Logged in as {{ user.username }} | <a href="/admin/logout/">Logout</a></p>
+        <p>
+            Logged in as {{ user.username }} |
+            <a href="{% url 'logout' %}">Logout</a>
+        </p>
     {% else %}
-        <p><a href="/admin/login/">Login</a></p>
+        <p><a href="{% url 'login' %}">Login</a></p>
     {% endif %}
     <hr>
     {% block content %}{% endblock %}
