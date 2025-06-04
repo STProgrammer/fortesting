@@ -12,8 +12,10 @@ Due to environment limitations, required packages like Django may not be install
 
 ```bash
 python manage.py migrate
-python manage.py createsuperuser
 ```
+
+A default user with username `demo` and password `demo123` is created
+automatically after running migrations.
 
 Start the development server:
 
