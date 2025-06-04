@@ -1,0 +1,11 @@
+{% extends 'socialapp/base.html' %}
+{% block content %}
+<h2>InsightMint Templates</h2>
+<ul>
+    {% for template in templates %}
+        <li>{{ template.name }} - <a href="{% url 'create_report' template.id %}">Start</a></li>
+    {% empty %}
+        <li>No templates yet.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

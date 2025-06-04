@@ -1,0 +1,9 @@
+{% extends 'socialapp/base.html' %}
+{% block content %}
+<h2>Welcome to InsightMint!</h2>
+<ol>
+    {% for step in steps %}
+        <li>{{ step }}</li>
+    {% endfor %}
+</ol>
+{% endblock %}

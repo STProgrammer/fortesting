@@ -1,0 +1,13 @@
+{% extends 'socialapp/base.html' %}
+{% block content %}
+<h2>{{ report.template.name }} Report</h2>
+<p><strong>Topic:</strong> {{ report.topic }}</p>
+<p><strong>Audience:</strong> {{ report.audience }}</p>
+<p><strong>Tone:</strong> {{ report.tone }}</p>
+<p><strong>Persona:</strong> {{ report.persona }}</p>
+<hr>
+{% for section in report.sections.all %}
+    <h3>{{ section.title }}</h3>
+    <p>{{ section.content|default:'(empty)' }}</p>
+{% endfor %}
+{% endblock %}
