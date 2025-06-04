@@ -1,0 +1,9 @@
+{% extends 'insightmint/base.html' %}
+
+{% block content %}
+<h2>{{ report }}</h2>
+<div class="mb-3">
+  {{ report.content|safe }}
+</div>
+<a href="{% url 'report_create' %}" class="btn btn-secondary">New Report</a>
+{% endblock %}

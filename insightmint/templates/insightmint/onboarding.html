@@ -1,0 +1,12 @@
+{% extends 'insightmint/base.html' %}
+
+{% block content %}
+<h2>Welcome to InsightMint</h2>
+<ol>
+  <li>Create your first report</li>
+  <li>Customize the tone and persona</li>
+  <li>Edit each section</li>
+  <li>Export and share</li>
+</ol>
+<a class="btn btn-success" href="{% url 'report_create' %}">Start Now</a>
+{% endblock %}
