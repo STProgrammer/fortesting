@@ -15,7 +15,10 @@
             | <a href="{% url 'landing' %}">InsightMint</a>
         </p>
     {% else %}
-        <p><a href="{% url 'login' %}">Login</a></p>
+        <p>
+            <a href="{% url 'login' %}">Login</a> |
+            <a href="{% url 'register' %}">Register</a>
+        </p>
     {% endif %}
     <hr>
     {% block content %}{% endblock %}
