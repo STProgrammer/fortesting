@@ -13,7 +13,10 @@ Due to environment limitations, required packages like Django may not be install
 ```bash
 python manage.py migrate
 python manage.py createsuperuser
+python manage.py create_demo_user
 ```
+
+The demo command creates a test user with username `demo` and password `demo123`.
 
 Start the development server:
 
