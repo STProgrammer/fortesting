@@ -1,8 +1,28 @@
 {% extends 'socialapp/base.html' %}
 
+{% block extra_head %}
+<style>
+    body {
+        background: linear-gradient(#004080, #002050);
+        font-family: "Trebuchet MS", Arial, sans-serif;
+        color: #fff;
+        min-height: 100vh;
+    }
+
+    .myspace-login-box {
+        background: #fff;
+        color: #000;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        margin-top: 60px;
+    }
+</style>
+{% endblock %}
+
 {% block content %}
 <div class="row justify-content-center">
-  <div class="col-md-4">
+  <div class="col-md-4 myspace-login-box">
     <h2 class="mb-3">Login</h2>
     <form method="post">
       {% csrf_token %}
