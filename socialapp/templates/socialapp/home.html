@@ -1,0 +1,17 @@
+{% extends 'socialapp/base.html' %}
+
+{% block content %}
+<h2>All Posts</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Share</button>
+</form>
+<ul>
+    {% for post in posts %}
+        <li>{{ post.created_at }} - {{ post.profile.user.username }}: {{ post.content }}</li>
+    {% empty %}
+        <li>No posts yet.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'socialapp/base.html' %}
+
+{% block content %}
+<h2>{{ profile.user.username }}'s Profile</h2>
+<p>Birth date: {{ profile.birth_date }}</p>
+<p>Interests: {{ profile.interests }}</p>
+<h3>Posts</h3>
+<ul>
+    {% for post in profile.posts.all %}
+        <li>{{ post.created_at }} - {{ post.content }}</li>
+    {% empty %}
+        <li>No posts yet.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
